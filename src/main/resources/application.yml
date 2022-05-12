@@ -1,0 +1,10 @@
+hello:
+  incoming:
+    uri: "file:src/data?noop=true&fileName=trade.json"
+#    Reprocess file of file change
+#    uri: "file:src/data?noop=true&idempotentKey=${file:name}-${file:modified}&fileName=trade.json"
+#    In case if needed to reprocess the same file by timer, we could use file module with timer params in uri
+  outgoing:
+    uri: "file:target/data?fileName=trade-out.json"
+#    Includes date to output filename
+#    uri: "file:target/data?fileName=trade-out_${date:now:yyyyMMdd_hhmmss}.json"

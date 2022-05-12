@@ -1,0 +1,5 @@
+hello:
+  incoming:
+    uri: "direct:trade_in_json"
+  outgoing:
+    uri: "mock:trade_out_json"
